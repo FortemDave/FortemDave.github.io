@@ -64,7 +64,7 @@ function initParticles() {
                 }
             },
             color: {
-                value: ["#00f5ff", "#ff00ff", "#ffffff"]
+                value: ["#00ff00", "#00ffff", "#ff00ff"]
             },
             shape: {
                 type: "circle"
@@ -90,7 +90,7 @@ function initParticles() {
             line_linked: {
                 enable: true,
                 distance: 150,
-                color: "#00f5ff",
+                color: "#00ff00",
                 opacity: 0.4,
                 width: 1
             },
@@ -193,7 +193,7 @@ setInterval(glitchEffect, 10000);
 
 // Add floating animation to cards on hover
 document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.glass-card');
+    const cards = document.querySelectorAll('.retro-card');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -223,7 +223,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all cards
 document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.glass-card');
+    const cards = document.querySelectorAll('.retro-card');
     cards.forEach(card => {
         observer.observe(card);
     });
