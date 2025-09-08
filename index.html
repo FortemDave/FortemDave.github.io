@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratham Harshvardhan Dave - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,23 +13,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">PD</span>
+                <span class="logo-text">P.H.DAVE</span>
             </div>
             <div class="nav-menu">
                 <div class="nav-item">
                     <a href="#home" class="nav-link active" data-page="home">Home</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#professional" class="nav-link" data-page="professional">Professional Life</a>
+                    <a href="#professional" class="nav-link" data-page="professional">Professional</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#personal" class="nav-link" data-page="personal">Personal Life</a>
+                    <a href="#personal" class="nav-link" data-page="personal">Personal</a>
                 </div>
                 <div class="nav-item">
                     <a href="#research" class="nav-link" data-page="research">Research</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#contact" class="nav-link" data-page="contact">Contact Me Out</a>
+                    <a href="#contact" class="nav-link" data-page="contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -43,42 +43,41 @@
                 <div class="business-card">
                     <div class="card-header">
                         <div class="avatar">
-                            <i class="fas fa-user-astronaut"></i>
+                            <i class="fas fa-user-tie"></i>
                         </div>
-                        <div class="status-indicator"></div>
                     </div>
                     <div class="card-body">
                         <h1 class="name">Pratham Harshvardhan Dave</h1>
-                        <h2 class="title">M.Tech - Computational & Data Science</h2>
+                        <h2 class="title">M.Tech Computational & Data Science</h2>
                         <p class="institute">Indian Institute of Science, Bengaluru</p>
                         
-                        <div class="quick-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">9.27</span>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">9.27</span>
                                 <span class="stat-label">B.Tech CPI</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-value">8.20</span>
+                            <div class="stat-card">
+                                <span class="stat-number">8.20</span>
                                 <span class="stat-label">M.Tech CPI</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-value">5+</span>
+                            <div class="stat-card">
+                                <span class="stat-number">5+</span>
                                 <span class="stat-label">Internships</span>
                             </div>
                         </div>
 
                         <div class="contact-info">
-                            <div class="contact-item">
+                            <div class="contact-row">
                                 <i class="fas fa-envelope"></i>
                                 <span>prathamdave@iisc.ac.in</span>
                             </div>
-                            <div class="contact-item">
+                            <div class="contact-row">
                                 <i class="fas fa-phone"></i>
                                 <span>+91-7730814817</span>
                             </div>
-                            <div class="contact-item">
+                            <div class="contact-row">
                                 <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn Profile</span>
+                                <span>linkedin.com/in/prathamdave</span>
                             </div>
                         </div>
                     </div>
@@ -89,58 +88,81 @@
         <!-- PROFESSIONAL LIFE PAGE -->
         <div id="professional" class="page">
             <div class="page-content">
-                <h1 class="page-title">
-                    <i class="fas fa-briefcase"></i>
-                    Professional Life
-                </h1>
+                <h1 class="page-title">Professional Experience</h1>
                 
-                <div class="section-grid">
-                    <div class="retro-card">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2024 - Ongoing</div>
-                            <div class="timeline-content">
-                                <h4>M.Tech - Computational And Data Science</h4>
-                                <p>Indian Institute Of Science, Bengaluru</p>
-                                <span class="grade">CPI: 8.20</span>
-                            </div>
+                <div class="content-grid">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2020 - 2024</div>
-                            <div class="timeline-content">
-                                <h4>B.Tech - Computer Science and Engineering</h4>
-                                <p>Indian Institute Of Information Technology, Dharwad</p>
-                                <span class="grade">CPI: 9.27</span>
+                        <h3>Education</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2024 - Present</div>
+                                <div class="timeline-content">
+                                    <h4>M.Tech - Computational & Data Science</h4>
+                                    <p>Indian Institute of Science, Bengaluru</p>
+                                    <span class="grade">CPI: 8.20</span>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020 - 2024</div>
+                                <div class="timeline-content">
+                                    <h4>B.Tech - Computer Science & Engineering</h4>
+                                    <p>IIIT Dharwad, Karnataka</p>
+                                    <span class="grade">CPI: 9.27</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="retro-card">
-                        <h3><i class="fas fa-laptop-code"></i> Work Experience</h3>
-                        <div class="experience-item">
-                            <div class="exp-header">
-                                <h4>Cerebras Systems</h4>
-                                <span class="duration">May 2025 – July 2025</span>
-                            </div>
-                            <p class="role">Kernel Intern | Kernels for Custom Accelerators</p>
-                            <ul>
-                                <li>Abstracted Assembly level instructions to higher language code</li>
-                                <li>Validated assembly code trace generation</li>
-                                <li>Developed cycle-accurate ports of Inference Kernels</li>
-                            </ul>
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
                         </div>
-
-                        <div class="experience-item">
-                            <div class="exp-header">
-                                <h4>Qualcomm</h4>
-                                <span class="duration">November 2023 – July 2024</span>
+                        <h3>Work Experience</h3>
+                        
+                        <div class="experience-list">
+                            <div class="exp-item">
+                                <div class="exp-header">
+                                    <h4>Cerebras Systems</h4>
+                                    <span class="duration">May 2025 – July 2025</span>
+                                </div>
+                                <p class="role">Kernel Intern | Custom Accelerators</p>
+                                <div class="exp-desc">
+                                    <p>• Abstracted Assembly instructions to higher-level code</p>
+                                    <p>• Developed cycle-accurate inference kernel ports</p>
+                                    <p>• Collaborated with international teams (Bengaluru & Toronto)</p>
+                                </div>
                             </div>
-                            <p class="role">Interim Engineering Intern | Memory Controller Profiling</p>
-                            <ul>
-                                <li>Developed streamlined analysis tools for infrastructure team</li>
-                                <li>Conducted time series analysis for system optimization</li>
-                                <li>Enhanced efficiency in metric extraction processes</li>
-                            </ul>
+
+                            <div class="exp-item">
+                                <div class="exp-header">
+                                    <h4>Qualcomm</h4>
+                                    <span class="duration">Nov 2023 – July 2024</span>
+                                </div>
+                                <p class="role">Engineering Intern | Memory Controller Profiling</p>
+                                <div class="exp-desc">
+                                    <p>• Built automated analysis tools for infrastructure team</p>
+                                    <p>• Performed time-series analysis for system optimization</p>
+                                    <p>• Enhanced metric extraction efficiency</p>
+                                </div>
+                            </div>
+
+                            <div class="exp-item">
+                                <div class="exp-header">
+                                    <h4>IIT Roorkee</h4>
+                                    <span class="duration">June 2023 – July 2023</span>
+                                </div>
+                                <p class="role">S.P.A.R.K. Program | CPU Profiling & ML</p>
+                                <div class="exp-desc">
+                                    <p>• Profiled cache layouts across x86 & ARM architectures</p>
+                                    <p>• Implemented time-series analysis for IPC prediction</p>
+                                    <p>• Developed workload-specific load balancer concepts</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -150,55 +172,87 @@
         <!-- PERSONAL LIFE PAGE -->
         <div id="personal" class="page">
             <div class="page-content">
-                <h1 class="page-title">
-                    <i class="fas fa-motorcycle"></i>
-                    Personal Life
-                </h1>
+                <h1 class="page-title">Personal Life</h1>
                 
-                <div class="personal-grid">
-                    <div class="retro-card hero-card">
-                        <div class="bike-hero">
-                            <i class="fas fa-motorcycle bike-icon"></i>
-                            <h2>Passionate Biker</h2>
-                            <p>Life is a journey, and I prefer to take mine on two wheels. The open road, the wind, and the freedom of exploration define my personal adventures.</p>
+                <div class="personal-hero">
+                    <div class="glass-card hero-card">
+                        <div class="bike-showcase">
+                            <div class="bike-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <h2>Honda CB 350 Enthusiast</h2>
+                            <p class="bike-desc">Exploring Karnataka's scenic routes on my Honda CB 350. The perfect blend of retro styling and modern engineering - much like my approach to technology and research.</p>
+                            
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">348cc Single Cylinder</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Power</span>
+                                    <span class="spec-value">20.78 bhp</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Style</span>
+                                    <span class="spec-value">Classic Retro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid personal-grid">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Riding Adventures</h3>
+                        
+                        <div class="adventure-list">
+                            <div class="adventure-item">
+                                <h4>Weekend Escapes</h4>
+                                <p>Regular rides through Karnataka's hill stations and coastal roads, capturing the essence of South Indian landscapes.</p>
+                            </div>
+                            
+                            <div class="adventure-item">
+                                <h4>Long Distance Tours</h4>
+                                <p>Multi-day journeys exploring hidden gems across South India, combining the thrill of riding with cultural discovery.</p>
+                            </div>
+                            
+                            <div class="adventure-item">
+                                <h4>Photography Rides</h4>
+                                <p>Merging passion for motorcycles with landscape photography, documenting the journey as much as the destination.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="retro-card">
-                        <h3><i class="fas fa-road"></i> Riding Adventures</h3>
-                        <div class="adventure-item">
-                            <h4>Weekend Rides</h4>
-                            <p>Regular exploration of Karnataka's scenic routes and mountain passes</p>
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-compass"></i>
                         </div>
-                        <div class="adventure-item">
-                            <h4>Long Distance Tours</h4>
-                            <p>Multi-day journeys across South India discovering hidden gems</p>
-                        </div>
-                        <div class="adventure-item">
-                            <h4>Photography Rides</h4>
-                            <p>Combining passion for bikes with landscape photography</p>
-                        </div>
-                    </div>
-
-                    <div class="retro-card">
-                        <h3><i class="fas fa-users"></i> Interests & Hobbies</h3>
-                        <div class="hobby-grid">
-                            <div class="hobby-item">
+                        <h3>Interests & Philosophy</h3>
+                        
+                        <div class="interests-grid">
+                            <div class="interest-item">
                                 <i class="fas fa-camera"></i>
                                 <span>Photography</span>
                             </div>
-                            <div class="hobby-item">
+                            <div class="interest-item">
                                 <i class="fas fa-mountain"></i>
-                                <span>Adventure Sports</span>
+                                <span>Adventure</span>
                             </div>
-                            <div class="hobby-item">
-                                <i class="fas fa-code"></i>
-                                <span>Tech Exploration</span>
+                            <div class="interest-item">
+                                <i class="fas fa-cogs"></i>
+                                <span>Engineering</span>
                             </div>
-                            <div class="hobby-item">
-                                <i class="fas fa-music"></i>
-                                <span>Music</span>
+                            <div class="interest-item">
+                                <i class="fas fa-road"></i>
+                                <span>Travel</span>
                             </div>
+                        </div>
+                        
+                        <div class="philosophy">
+                            <p>"Life, like riding a motorcycle, is about balance, momentum, and the courage to lean into the curves."</p>
                         </div>
                     </div>
                 </div>
@@ -208,69 +262,89 @@
         <!-- RESEARCH PAGE -->
         <div id="research" class="page">
             <div class="page-content">
-                <h1 class="page-title">
-                    <i class="fas fa-flask"></i>
-                    Research & Innovation
-                </h1>
+                <h1 class="page-title">Research & Innovation</h1>
                 
-                <div class="research-grid">
-                    <div class="retro-card">
-                        <h3><i class="fas fa-patent"></i> Patents & Publications</h3>
+                <div class="content-grid">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-patent"></i>
+                        </div>
+                        <h3>Patents & Publications</h3>
+                        
                         <div class="patent-item">
                             <h4>Wireless Network Selection Using Learning Technique</h4>
-                            <p><strong>Patent Number:</strong> 202341032915</p>
-                            <p><strong>Status:</strong> Filed, Patent Pending</p>
-                            <p>Developed a Novel Method for dynamic Network Selection using Reinforcement Learning considering networking needs of concurrent applications.</p>
+                            <div class="patent-meta">
+                                <span class="patent-number">Patent #202341032915</span>
+                                <span class="patent-status">Filed • Pending</span>
+                            </div>
+                            <p class="patent-desc">Novel dynamic network selection method employing reinforcement learning to consider networking requirements of concurrent applications on user devices.</p>
                         </div>
                     </div>
 
-                    <div class="retro-card">
-                        <h3><i class="fas fa-microscope"></i> Ongoing Research</h3>
-                        <div class="research-item">
-                            <h4>D.R.E.A.M. Lab IISc & UMass Amherst</h4>
-                            <span class="research-date">October 2024 – Ongoing</span>
-                            <p><strong>Role:</strong> Second Author</p>
-                            <p><strong>Focus:</strong> Split CPU-TPU ML Workload Inference on Nvidia Jetson devices</p>
-                            <p>Analyzing cost of in-memory Model Swap for distributed computing optimization</p>
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-flask"></i>
                         </div>
+                        <h3>Ongoing Research</h3>
+                        
+                        <div class="research-list">
+                            <div class="research-item">
+                                <div class="research-header">
+                                    <h4>D.R.E.A.M. Lab IISc & UMass Amherst</h4>
+                                    <span class="research-period">Oct 2024 – Present</span>
+                                </div>
+                                <p class="research-role">Second Author | TPU & Distributed Computing</p>
+                                <p class="research-desc">Analyzing cost of in-memory model swap for split CPU-TPU ML workload inference on Nvidia Jetson devices.</p>
+                            </div>
 
-                        <div class="research-item">
-                            <h4>IIIT Dharwad Collaboration</h4>
-                            <span class="research-date">September 2024 – Ongoing</span>
-                            <p><strong>Role:</strong> First Author</p>
-                            <p><strong>Focus:</strong> Reinforcement Learning for N-User M-File encoding systems</p>
-                            <p>Developing novel centralized server encoding methods based on user cache analysis</p>
+                            <div class="research-item">
+                                <div class="research-header">
+                                    <h4>IIIT Dharwad Collaboration</h4>
+                                    <span class="research-period">Sept 2024 – Present</span>
+                                </div>
+                                <p class="research-role">First Author | RL & Coding Theory</p>
+                                <p class="research-desc">Developing novel reinforcement learning methods for N-User M-File encoding systems with centralized server optimization.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="retro-card">
-                        <h3><i class="fas fa-tools"></i> Technical Skills</h3>
-                        <div class="skills-grid">
+                    <div class="glass-card full-width">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Technical Expertise</h3>
+                        
+                        <div class="skills-section">
                             <div class="skill-category">
-                                <h4>Languages</h4>
+                                <h4>Programming Languages</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">C++</span>
                                     <span class="skill-tag">Python</span>
                                     <span class="skill-tag">C</span>
                                     <span class="skill-tag">MATLAB</span>
+                                    <span class="skill-tag">Bash</span>
                                 </div>
                             </div>
+                            
                             <div class="skill-category">
-                                <h4>ML/AI</h4>
+                                <h4>Machine Learning & AI</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">TensorFlow</span>
                                     <span class="skill-tag">PyTorch</span>
                                     <span class="skill-tag">Stable Baselines3</span>
-                                    <span class="skill-tag">SKLearn</span>
+                                    <span class="skill-tag">Scikit-learn</span>
+                                    <span class="skill-tag">OpenCV</span>
                                 </div>
                             </div>
+                            
                             <div class="skill-category">
-                                <h4>Systems</h4>
+                                <h4>Systems & Tools</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">Linux</span>
                                     <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">Docker</span>
                                     <span class="skill-tag">CMake</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Nvidia NSight</span>
                                 </div>
                             </div>
                         </div>
@@ -282,49 +356,62 @@
         <!-- CONTACT PAGE -->
         <div id="contact" class="page">
             <div class="page-content">
-                <h1 class="page-title">
-                    <i class="fas fa-paper-plane"></i>
-                    Contact Me Out
-                </h1>
+                <h1 class="page-title">Get In Touch</h1>
                 
-                <div class="contact-grid">
-                    <div class="retro-card">
-                        <h3><i class="fas fa-envelope-open"></i> Get In Touch</h3>
-                        <p>Choose your preferred way to reach out. Whether you want to collaborate, discuss research, or just say hello!</p>
+                <div class="contact-intro">
+                    <p>Whether you're interested in collaboration, research opportunities, or just want to discuss technology and motorcycles, I'd love to hear from you.</p>
+                </div>
+
+                <div class="content-grid contact-grid">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <h3>Contact Forms</h3>
                         
                         <div class="form-options">
                             <div class="form-option">
-                                <div class="form-card">
+                                <div class="form-type">
                                     <i class="fas fa-user-circle"></i>
-                                    <h4>Non-Anonymous Contact</h4>
-                                    <p>Share your details for direct communication</p>
-                                    <a href="#" class="form-btn" id="nonAnonymousForm">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Open Form
-                                    </a>
+                                    <div class="form-info">
+                                        <h4>Professional Contact</h4>
+                                        <p>For collaborations, job opportunities, or professional inquiries</p>
+                                    </div>
                                 </div>
+                                <a href="#" class="contact-btn" id="nonAnonymousForm">
+                                    Send Message
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
 
                             <div class="form-option">
-                                <div class="form-card">
+                                <div class="form-type">
                                     <i class="fas fa-user-secret"></i>
-                                    <h4>Anonymous Feedback</h4>
-                                    <p>Send anonymous messages or feedback</p>
-                                    <a href="#" class="form-btn" id="anonymousForm">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Open Form
-                                    </a>
+                                    <div class="form-info">
+                                        <h4>Anonymous Feedback</h4>
+                                        <p>Share thoughts, suggestions, or feedback anonymously</p>
+                                    </div>
                                 </div>
+                                <a href="#" class="contact-btn" id="anonymousForm">
+                                    Send Feedback
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="retro-card">
-                        <h3><i class="fas fa-address-card"></i> Direct Contact</h3>
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <h3>Direct Contact</h3>
+                        
                         <div class="contact-methods">
                             <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <div class="method-info">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
                                     <h4>Email</h4>
                                     <p>prathamdave@iisc.ac.in</p>
                                     <p>prathamdave27@gmail.com</p>
@@ -332,34 +419,50 @@
                             </div>
 
                             <div class="contact-method">
-                                <i class="fas fa-phone"></i>
-                                <div class="method-info">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-details">
                                     <h4>Phone</h4>
                                     <p>+91-7730814817</p>
                                 </div>
                             </div>
 
                             <div class="contact-method">
-                                <i class="fab fa-linkedin"></i>
-                                <div class="method-info">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-details">
                                     <h4>LinkedIn</h4>
-                                    <p>Connect professionally</p>
+                                    <p>Professional Network</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="retro-card">
-                    <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
-                    <div class="location-info">
-                        <div class="location-item">
-                            <i class="fas fa-university"></i>
-                            <span>Currently at Indian Institute of Science, Bengaluru</span>
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="location-item">
-                            <i class="fas fa-globe-asia"></i>
-                            <span>Karnataka, India</span>
+                        <h3>Location</h3>
+                        
+                        <div class="location-info">
+                            <div class="location-item">
+                                <i class="fas fa-university"></i>
+                                <div class="location-details">
+                                    <h4>Current</h4>
+                                    <p>Indian Institute of Science</p>
+                                    <p>Bengaluru, Karnataka, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="location-item">
+                                <i class="fas fa-clock"></i>
+                                <div class="location-details">
+                                    <h4>Timezone</h4>
+                                    <p>IST (UTC +5:30)</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -367,10 +470,6 @@
         </div>
     </div>
 
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

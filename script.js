@@ -1,9 +1,12 @@
-// Navigation functionality
+// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize particles
-    initParticles();
-    
-    // Navigation handling
+    initializeNavigation();
+    initializeFormHandlers();
+    initializeAnimations();
+});
+
+// Navigation functionality
+function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
     
@@ -18,213 +21,158 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to clicked link
             this.classList.add('active');
             
-            // Show corresponding page
+            // Show corresponding page with smooth transition
             const targetPage = this.getAttribute('data-page');
-            document.getElementById(targetPage).classList.add('active');
-        });
-    });
-    
-    // Form button handlers
-    document.getElementById('nonAnonymousForm').addEventListener('click', function(e) {
-        e.preventDefault();
-        // Replace with your actual Google Form URL for non-anonymous
-        window.open('https://docs.google.com/forms/d/e/YOUR_NON_ANONYMOUS_FORM_ID/viewform', '_blank');
-    });
-    
-    document.getElementById('anonymousForm').addEventListener('click', function(e) {
-        e.preventDefault();
-        // Replace with your actual Google Form URL for anonymous
-        window.open('https://docs.google.com/forms/d/e/YOUR_ANONYMOUS_FORM_ID/viewform', '_blank');
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            const targetElement = document.getElementById(targetPage);
+            
+            if (targetElement) {
+                targetElement.classList.add('active');
+                
+                // Smooth scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             }
         });
     });
-});
-
-// Particles.js configuration
-function initParticles() {
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: ["#00ff00", "#00ffff", "#ff00ff"]
-            },
-            shape: {
-                type: "circle"
-            },
-            opacity: {
-                value: 0.6,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1
-                }
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 0.1
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: "#00ff00",
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false,
-                attract: {
-                    enable: false
-                }
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: "repulse"
-                },
-                onclick: {
-                    enable: true,
-                    mode: "push"
-                },
-                resize: true
-            },
-            modes: {
-                repulse: {
-                    distance: 100,
-                    duration: 0.4
-                },
-                push: {
-                    particles_nb: 4
-                }
-            }
-        },
-        retina_detect: true
-    });
 }
 
-// Add dynamic typing effect for the name
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
+// Form handlers
+function initializeFormHandlers() {
+    // Non-anonymous form button
+    const nonAnonymousBtn = document.getElementById('nonAnonymousForm');
+    if (nonAnonymousBtn) {
+        nonAnonymousBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Replace with your actual Google Form URL
+            window.open('https://docs.google.com/forms/d/e/YOUR_NON_ANONYMOUS_FORM_ID/viewform', '_blank');
+        });
     }
     
-    type();
+    // Anonymous form button
+    const anonymousBtn = document.getElementById('anonymousForm');
+    if (anonymousBtn) {
+        anonymousBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Replace with your actual Google Form URL
+            window.open('https://docs.google.com/forms/d/e/YOUR_ANONYMOUS_FORM_ID/viewform', '_blank');
+        });
+    }
 }
 
-// Initialize typing effect when home page is visible
-document.addEventListener('DOMContentLoaded', function() {
-    const nameElement = document.querySelector('.name');
-    const originalText = nameElement.textContent;
+// Initialize animations and interactions
+function initializeAnimations() {
+    // Smooth hover effects for glass cards
+    const glassCards = document.querySelectorAll('.glass-card');
     
-    // Start typing effect after a short delay
-    setTimeout(() => {
-        typeWriter(nameElement, originalText, 100);
-    }, 1000);
-});
-
-// Add glitch effect to logo
-function glitchEffect() {
-    const logo = document.querySelector('.logo-text');
-    const originalText = logo.textContent;
-    const glitchChars = '!<>-_\\/[]{}—=+*^?#________';
-    
-    let iterations = 0;
-    
-    const interval = setInterval(() => {
-        logo.textContent = originalText
-            .split('')
-            .map((letter, index) => {
-                if (index < iterations) {
-                    return originalText[index];
-                }
-                return glitchChars[Math.floor(Math.random() * glitchChars.length)];
-            })
-            .join('');
-        
-        if (iterations >= originalText.length) {
-            clearInterval(interval);
-        }
-        
-        iterations += 1/3;
-    }, 30);
-}
-
-// Trigger glitch effect periodically
-setInterval(glitchEffect, 10000);
-
-// Add floating animation to cards on hover
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.retro-card');
-    
-    cards.forEach(card => {
+    glassCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) rotateX(5deg)';
+            this.style.transform = 'translateY(-8px) scale(1.02)';
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) rotateX(0)';
+            this.style.transform = 'translateY(0) scale(1)';
         });
+    });
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all cards for animation
+    glassCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Typewriter effect for name (optional)
+    const nameElement = document.querySelector('.name');
+    if (nameElement) {
+        const originalText = nameElement.textContent;
+        
+        // Add a subtle typing animation on load
+        setTimeout(() => {
+            nameElement.style.borderRight = '2px solid var(--accent-color)';
+            nameElement.style.animation = 'blink 1s infinite';
+            
+            setTimeout(() => {
+                nameElement.style.borderRight = 'none';
+                nameElement.style.animation = 'none';
+            }, 3000);
+        }, 1000);
+    }
+}
+
+// Add CSS for blinking cursor animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes blink {
+        0%, 50% { border-color: var(--accent-color); }
+        51%, 100% { border-color: transparent; }
+    }
+    
+    .fade-in {
+        animation: fadeInUp 0.8s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Add smooth scrolling for any anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-            entry.target.classList.add('animate-in');
+// Add keyboard navigation
+document.addEventListener('keydown', function(e) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const activeLink = document.querySelector('.nav-link.active');
+    
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        
+        const currentIndex = Array.from(navLinks).indexOf(activeLink);
+        let newIndex;
+        
+        if (e.key === 'ArrowLeft') {
+            newIndex = currentIndex > 0 ? currentIndex - 1 : navLinks.length - 1;
+        } else {
+            newIndex = currentIndex < navLinks.length - 1 ? currentIndex + 1 : 0;
         }
-    });
-}, observerOptions);
-
-// Observe all cards
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.retro-card');
-    cards.forEach(card => {
-        observer.observe(card);
-    });
+        
+        navLinks[newIndex].click();
+    }
 });
